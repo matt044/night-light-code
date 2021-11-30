@@ -1,0 +1,26 @@
+void setup() {
+  // put your setup code here, to run once:
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}int light_value = 0;
+
+
+
+  pinMode(A0, INPUT);
+  pinMode(2, OUTPUT);
+}
+
+void loop()
+{
+  light_value = analogRead(A0);
+  if (light_value < 60) {
+    digitalWrite(2, HIGH);
+  } else {
+    digitalWrite(2, LOW);
+  }
+  delay(10); // Delay a little bit to improve simulation performance
+}
